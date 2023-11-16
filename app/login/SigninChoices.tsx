@@ -17,7 +17,7 @@ export const SigninChoices = () => {
     url = url.includes('http') ? url : `https://${url}`;
     // Make sure to including trailing `/`.
     url = url.charAt(url.length - 1) === '/' ? url : `${url}/`;
-    return url;
+    return url + 'auth/callback';
   };
 
   const handleSignin: React.MouseEventHandler<HTMLButtonElement> = async (event) => {
